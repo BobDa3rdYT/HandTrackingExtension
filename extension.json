@@ -1,0 +1,29 @@
+{
+  "id": "handtracking",
+  "name": "Hand Tracking Extension",
+  "description": "Track hand and finger positions in real-time.",
+  "blocks": [
+    {
+      "opcode": "getFingerPosition",
+      "blockType": "reporter",
+      "text": "Get [FINGER] position [COORD]",
+      "arguments": {
+        "FINGER": { "type": "string", "menu": "fingers" },
+        "COORD": { "type": "string", "menu": "coordinates" }
+      }
+    },
+    {
+      "opcode": "getFingerDistance",
+      "blockType": "reporter",
+      "text": "Distance between [FINGER1] and [FINGER2]",
+      "arguments": {
+        "FINGER1": { "type": "string", "menu": "fingers" },
+        "FINGER2": { "type": "string", "menu": "fingers" }
+      }
+    }
+  ],
+  "menus": {
+    "fingers": ["thumb", "index", "middle", "ring", "pinky"],
+    "coordinates": ["x", "y", "z"]
+  }
+}
